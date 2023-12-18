@@ -44,15 +44,15 @@
                 </div>
                 <div class="nav-btn-c">
                     <div>
-                        <button class="nav-btn">JOIN/LOG IN</button>
+                        <button class="nav-btn" >JOIN/LOG IN</button>
                     </div>
                     <div class="menu-icon">
-                        <a class="open-btn"href="#"><i class="ion-navicon-round"></i></a>
+                        <a class="open-btn" id="open"><i class="ion-navicon-round"></i></a>
                     </div>
                                
                 </div>
-                <div class="offcanvas-nav-links">
-                        <a class="close-btn" href=""><i class="ion-close-round"></i></a>
+                <div class="offcanvas-nav-links" id="collapse">
+                         <a class="close-btn" id="close" href="#"><i class="ion-close-round"></i></a>
                     <ul>
                         <li><a href="#"></a>HOME</li>
                         <li><a href="#"></a>REWARDS</li>
@@ -300,16 +300,31 @@
 
         
 
-      <script type="text/javascript">
-         
-       
-        // var openBtn = document.getElementsByClassName('.open-btn');
-        // var closeBtn = document.getElementsByClassName('.close-btn');
-      
+        <script type="text/javascript"></script>
+        <script>
+            const button = document.getElementById('open');
+                const navList = document.getElementById('collapse');
+                const closeBtn = document.getElementById('close');
 
-        
-        
-      </script>
+                button.addEventListener('click', function () {
+
+                    if (navList.style.display === 'none') {
+                        navList.style.display = 'flex';
+                    } else {
+                        navList.style.display = 'none';
+                    }
+                });
+
+                closeBtn.addEventListener('click', function () {
+
+                    if(navList.style.display === 'flex'){
+                        navList.style.display ='none';
+                    }else {
+                        navList.style.display = 'flex';
+                    }
+                });
+             
+        </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
