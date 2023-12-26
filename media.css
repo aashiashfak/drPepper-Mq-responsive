@@ -314,8 +314,9 @@
 
     .close-btn {
         position: absolute;
-        top: 0;
-        right: 3vh;
+        top: 4px;
+        right: 1px;
+        font-size: 2rem;
 
     }
 
@@ -332,6 +333,11 @@
     }
     .sec-2-in h2{
         padding-bottom: 10px;
+    }
+    .scroll {
+        background-color:rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+      
     }
 
 

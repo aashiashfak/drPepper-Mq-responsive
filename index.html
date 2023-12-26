@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="media.css">
     <link rel="icon" href="Images/dr-pepper.svg">
 </head>
-<body>
+<body id="overlay">
         <header>
             <img class="bg-img" src="Images/cfb_wave_2_home_mobile.jpg" alt="">
             <nav class="desktop-nav">
@@ -310,8 +310,10 @@
 
                     if (navList.style.display === 'none') {
                         navList.style.display = 'flex';
+                        document.body.classList.add("scroll");
                     } else {
                         navList.style.display = 'none';
+                        document.body.classList.remove("scroll");
                     }
                 });
 
@@ -319,8 +321,10 @@
 
                     if(navList.style.display === 'flex'){
                         navList.style.display ='none';
+                        document.body.classList.remove("scroll");
                     }else {
                         navList.style.display = 'flex';
+                        document.body.classList.add("scroll");
                     }
                 });
              
